@@ -18,7 +18,7 @@ cd "var/cache/pacman/pkg" || exit 1
 ARCH="(i686|x86_64|any)"
 URL=${2:-https://mirrors.tuna.tsinghua.edu.cn/artixlinux/system/os/x86_64}
 curl -L "$URL" >"repo_content" || exit 1
-PACKAGES="[a-z].*-mirrorlist acl bash brotli bzip2 ca-certificates ca-certificates-mozilla ca-certificates-utils coreutils curl e2fsprogs expat filesystem findutils glibc gpgme keyutils krb5 libarchive libassuan libffi libgpg-error libidn2 libnghttp2 libnghttp3 libp11-kit libpsl libssh2 libtasn1 libunistring lz4 ncurses openssl p11-kit pacman readline xz zlib zstd"
+PACKAGES="[a-z].*-mirrorlist acl bash brotli bzip2 ca-certificates ca-certificates-mozilla ca-certificates-utils coreutils curl e2fsprogs expat filesystem findutils glibc gcc-libs gpgme keyutils krb5 libarchive libassuan libffi libgpg-error libidn2 libnghttp2 libnghttp3 libp11-kit libpsl libssh2 libtasn1 libunistring libxml2 lz4 ncurses openssl p11-kit pacman readline xz zlib zstd icu"
 # unpack
 EXTRACT() {
   for COMPRESSION in --zstd --gzip --xz; do
